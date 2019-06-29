@@ -6,11 +6,13 @@ import com.ing.blockchain.zk.util.ExportUtil;
 import java.math.BigInteger;
 
 public class Eth { // government or KYC provider
-  public static byte[] exportSolidity(SecretOrderGroup group, BigInteger committmentValue) {
-    Commitment committment = new Commitment(group, committmentValue);
-    byte[] solidityCommitment = ExportUtil.exportForEVM(committment);
-    System.out.println("Ethereum solidity output:");
-    System.out.println(solidityCommitment);
+  public static byte[] exportSolidity(SecretOrderGroup group, BigInteger commitmentValue) {
+    Commitment commitment = new Commitment(group, commitmentValue);
+    byte[] solidityCommitment = ExportUtil.exportForEVM(commitment);
+
+    Utils.print("Ethereum solidity output:");
+    Utils.print(solidityCommitment);
+
     return solidityCommitment;
   }
 }

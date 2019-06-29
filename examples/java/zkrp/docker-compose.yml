@@ -4,3 +4,9 @@ services:
   zktest:
     build:
       context: .
+  geth:
+    build:
+      context: .
+      dockerfile: Dockerfile-geth
+    ports:
+      - 30303:30303

@@ -1,0 +1,14 @@
+FROM ethereum/client-go:latest
+
+WORKDIR /geth
+
+COPY ./data/* ./data/
+
+RUN ls .
+
+RUN geth init ./data/genesis.json
+
+RUN geth --targetgaslimit 99900000000 --networkid 15997 --rpc --rpcaddr 0.0.0.0 --rpcport 8545 --rpccorsdomain "*"
+
+# CMD [ "geth",  "--targetgaslimit" , "99900000000", "--networkid", "15997", "--rpc", "--rpcaddr", "0.0.0.0", "--rpcport", "8545", "--rpccorsdomain", "*" ]
+

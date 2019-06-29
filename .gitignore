@@ -2,4 +2,5 @@ examples/java/zkrp/build
 examples/java/zkrp/out
 .gradle
 examples/java/zkrp/.idea
-
+.DS_STORE
+node_modules

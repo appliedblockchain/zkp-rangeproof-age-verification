@@ -6,8 +6,8 @@ import com.ing.blockchain.zk.dto.TTPMessage;
 import java.math.BigInteger;
 
 public class Govt { // government or KYC provider
-    public static TTPMessage createTrustedMessage(BigInteger committmentValue, SecretOrderGroup orderGroup) {
-        TTPMessage ttpMessage = TTPGenerator.generateTTPMessage(committmentValue);
+    public static TTPMessage createTrustedMessage(BigInteger commitmentValue, SecretOrderGroup orderGroup) {
+        TTPMessage ttpMessage = TTPGenerator.generateTTPMessage(commitmentValue, orderGroup);
         return ttpMessage;
     }
 }
